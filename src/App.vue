@@ -104,7 +104,7 @@ const dialogTitle = ref("");
 
 const tableForm = ref({
   name: "张三",
-  phone: "18907051305",
+  phone: "1890700000",
   email: "862@qq.com",
   state: "在职",
   address: "广东省",
@@ -113,7 +113,7 @@ const tableData = ref([
   {
     id: "1",
     name: "Tom1",
-    phone: "18907051305",
+    phone: "1890700000",
     email: "862@qq.com",
     state: "在职",
     address: "No. 190,Grove St,Los Angeles",
@@ -121,7 +121,7 @@ const tableData = ref([
   {
     id: "2",
     name: "Tom2",
-    phone: "18907051305",
+    phone: "1890700000",
     email: "862@qq.com",
     state: "在职",
     address: "No. 190,Grove St,Los Angeles",
@@ -129,7 +129,7 @@ const tableData = ref([
   {
     id: "3",
     name: "Tom3",
-    phone: "18907051305",
+    phone: "1890700000",
     email: "862@qq.com",
     state: "在职",
     address: "No. 190,Grove St,Los Angeles",
@@ -137,23 +137,24 @@ const tableData = ref([
   {
     id: "4",
     name: "Tom4",
-    phone: "18907051305",
+    phone: "1890700000",
     email: "862@qq.com",
     state: "在职",
     address: "No. 190,Grove St,Los Angeles",
   },
 ]);
-const tableDataCopy = Object.assign(tableData.value)
+const tableDataCopy = Object.assign(tableData.value);
 
 // 搜素
 const handleQueryName = (val) => {
   if (val.length > 0) {
-    tableData.value = tableData.value.filter(item => (item.name).toLowerCase().match(val.toLowerCase()))
+    tableData.value = tableData.value.filter((item) =>
+      item.name.toLowerCase().match(val.toLowerCase())
+    );
   } else {
-    tableData.value = tableDataCopy
+    tableData.value = tableDataCopy;
   }
-  
-}
+};
 
 // 添加数据
 const handleAdd = () => {
